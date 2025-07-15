@@ -1,4 +1,4 @@
-# French OTP - Outrageously Trustworthy Program
+# 🥖 French OTP - Outrageously Trustworthy Program
 
 A simple, secure, offline C++ console-based OTP (TOTP) manager.
 
