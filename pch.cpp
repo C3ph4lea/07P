@@ -110,7 +110,6 @@ void wait_enter() {
     std::cin.get();
 }
 
-// --- QR code en ASCII, bien carré, bien visible ---
 void print_qr_ascii_nayuki(const std::string& text, int quiet = 3, int maxver = 8) {
     uint8_t qrcode[qrcodegen_BUFFER_LEN_MAX];
     uint8_t tempBuffer[qrcodegen_BUFFER_LEN_MAX];
@@ -126,8 +125,8 @@ void print_qr_ascii_nayuki(const std::string& text, int quiet = 3, int maxver = 
         return;
     }
     int size = qrcodegen_getSize(qrcode);
-    const char* BLACK = "  ";  // module noir (trou)
-    const char* WHITE = "##";  // fond blanc (plein)
+    const char* BLACK = "  ";  
+    const char* WHITE = "##";  
 
     for (int y = -quiet; y < size + quiet; ++y) {
         for (int x = -quiet; x < size + quiet; ++x) {
@@ -140,7 +139,6 @@ void print_qr_ascii_nayuki(const std::string& text, int quiet = 3, int maxver = 
     }
 }
 
-// --- Auto-relance en nouvelle console pour afficher le QR code seul ---
 void open_qr_in_new_console(const std::string& otpauth_uri) {
 #ifdef _WIN32
     char exePath[MAX_PATH];
@@ -427,7 +425,7 @@ int main(int argc, char* argv[]) {
 #ifdef _WIN32
         set_console_font_small();
 #endif
-        print_qr_ascii_nayuki(argv[2], 3, 10); // carré, pas trop zoomé
+        print_qr_ascii_nayuki(argv[2], 3, 10); 
         std::cout << "\nAppuyez sur une touche pour fermer la fenêtre QR...";
         std::cin.get();
         return 0;
