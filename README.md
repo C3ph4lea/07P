@@ -1,20 +1,18 @@
 # 🥖 French OTP - Outrageously Trustworthy Program
 
-A simple, secure, offline C++ console-based OTP (TOTP) manager.
+A simple, offline C++ console-based OTP (TOTP) manager.
 
 ---
 
 ## Features
 
 - **Multi-account TOTP** (compatible with Google Authenticator, FreeOTP, Aegis…)
-- **Strong encryption** for the OTP vault (AES-256-CBC + PBKDF2-HMAC-SHA256)
+- **Encryption** for the OTP vault (AES-256-CBC + PBKDF2-HMAC-SHA256)
 - **No cleartext OTP secrets** ever written to disk
 - **Add/remove accounts** easily
 - **Real-time OTP display** (SHA256, 6 digits, 90s time window)
 - **Scannable ASCII QR code** for every account, with auto-zoom in a dedicated pop-up console
 - **Local-only storage, no cloud, no tracking**
-- **Works on Windows and Linux** (portable, USB-ready)
-
 ---
 
 ## Security
@@ -26,11 +24,9 @@ A simple, secure, offline C++ console-based OTP (TOTP) manager.
 - **Single file vault:** `otps.bin`
 - **Compatible with any standard OTP app**
 - **Master password required** to open the vault
-- **No network dependencies or cloud sync**
 
 ### References
 
-- [RFC 6238 (TOTP)](https://datatracker.ietf.org/doc/html/rfc6238)
 - [OpenSSL Crypto](https://www.openssl.org/)
 - [Nayuki QR Code Generator](https://github.com/nayuki/QR-Code-generator)
 - [OWASP Cryptographic Storage](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
@@ -40,7 +36,7 @@ A simple, secure, offline C++ console-based OTP (TOTP) manager.
 ## Usage
 
 1. **Run the executable**  
-   (Double-click or run `./french-otp` from your terminal)
+   (Double-click or run `./07p.exe` from your terminal)
 
 2. **Set a master password**  
    (on first run, or if `otps.bin` does not exist)
